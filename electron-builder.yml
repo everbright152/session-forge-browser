@@ -40,14 +40,14 @@ linux:
     - AppImage
     - snap
     - deb
-  maintainer: kaishuu0123
+  maintainer: phil1px
   category: Utility
 appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
   provider: github
-  owner: kaishuu0123
+  owner: phil1px
   repo: browser-space
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/

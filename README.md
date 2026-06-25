@@ -1,44 +1,65 @@
-# Browser Space
+# Session Forge Browser
 
-A multi-account browser session manager. Switch between isolated Gmail, Slack, and web accounts with named workspaces.
+> A multi-account browser session manager — run isolated Gmail, Slack, and web accounts side by side in named workspaces.
+
+Session Forge Browser lets you stay signed in to multiple accounts on the same site at the same time. Each profile runs in a fully isolated browser session — separate cookies, storage, and cache — so your work, personal, and client accounts never collide.
 
 ## Features
 
-- 🔒 **Isolated Sessions** - Each profile has completely separated cookies, localStorage, and session data
-- 🎨 **Customizable Profiles** - Name your profiles, choose from 400+ icons or upload custom images, pick colors
-- 🌍 **Language Settings** - Set browser language per profile (15 languages supported)
-- 📱 **Collapsible Sidebar** - Icon-only or icon+name view
-- 🔔 **Notification Control** - Configurable per profile (Allow all / Ask / Block all)
-- 🗑️ **Data Management** - Clear cookies, cache, and app data per profile
-- 🔄 **Drag & Drop Reorder** - Organize profiles with drag and drop
-- 💾 **Data Path Access** - View and access profile data directories
-- 🚀 **Lightweight** - Built with Electron and optimized for performance
+- **Isolated sessions** — every profile has completely separate cookies, localStorage, cache, and session data
+- **Customizable profiles** — name each profile, pick from 400+ icons or upload a custom image, and choose a color
+- **Per-profile language** — set the browser language individually for each profile (15 languages)
+- **Notification control** — configure notifications per profile (Allow all / Ask / Block all), with the source profile shown in every alert
+- **Collapsible sidebar** — switch between icon-only and icon + name views
+- **Drag & drop ordering** — organize profiles the way you work
+- **Data management** — clear cookies, cache, and app data per profile
+- **Crash recovery** — unresponsive or crashed sessions can be reloaded without restarting the app
+- **Lightweight** — built on Electron and tuned for fast switching
 
-## Development
+## Technology Stack
 
-### Recommended IDE Setup
+| Layer            | Choice                          |
+| ---------------- | ------------------------------- |
+| Framework        | Electron                        |
+| Build tool       | electron-vite                   |
+| UI               | React + TypeScript              |
+| Styling          | Tailwind CSS                    |
+| Persistence      | electron-store                  |
+| Package manager  | Yarn                            |
+| Runtime          | Node.js 24 LTS                  |
 
-- [VSCode](https://code.visualstudio.com/) + [devcontainer](https://code.visualstudio.com/docs/devcontainers/tutorial)
+## Getting Started
 
-### Project Setup
+### Prerequisites
 
-#### Install
+- Node.js 24 LTS
+- Yarn
+
+A [VS Code](https://code.visualstudio.com/) + [Dev Container](https://code.visualstudio.com/docs/devcontainers/tutorial) setup is recommended for a consistent environment.
+
+### Install
 
 ```bash
 yarn
 ```
 
-#### Development
+### Run in development
 
 ```bash
 yarn dev
 ```
 
-#### Build
+### Build
 
-##### Windows Build (on Linux/DevContainer)
+```bash
+yarn build
+```
 
-To build Windows executables from Linux/DevContainer, you need to install Wine:
+## Platform Builds
+
+### Windows
+
+Building Windows executables on Linux / a Dev Container requires Wine:
 
 ```bash
 # Add 32-bit architecture support
@@ -54,49 +75,45 @@ sudo apt-get install -y wine wine32 wine64
 yarn build:win
 ```
 
-The Windows installer will be created in `dist/` directory:
-- `browser-space-0.1.0-setup.exe` - NSIS installer
-
-##### macOS Build
+### macOS
 
 ```bash
 yarn build:mac
 ```
 
-Requirements: macOS system required for proper code signing
+> A macOS host is required for proper code signing.
 
-##### Linux Build
+### Linux
 
 ```bash
 yarn build:linux
 ```
 
-Outputs:
-- AppImage
-- Snap package
-- Debian package
+Outputs an AppImage, a Snap package, and a Debian package.
 
-#### Build Output
+## Build Output
 
-All build artifacts are created in the `dist/` directory:
+All artifacts are written to the `dist/` directory:
+
 ```
 dist/
-├── browser-space-0.1.0-setup.exe       # Windows installer
-├── browser-space-0.1.0.dmg             # macOS disk image
-├── browser-space-0.1.0.AppImage        # Linux AppImage
-├── browser-space-0.1.0.snap            # Linux Snap
-└── browser-space_0.1.0_amd64.deb       # Debian package
+├── browser-space-<version>-setup.exe   # Windows installer (NSIS)
+├── browser-space-<version>.dmg         # macOS disk image
+├── browser-space-<version>.AppImage    # Linux AppImage
+├── browser-space-<version>.snap        # Linux Snap
+└── browser-space_<version>_amd64.deb   # Debian package
 ```
 
-## Technology Stack
+## Scripts
 
-- **Framework:** Electron
-- **Build Tool:** electron-vite
-- **UI:** React + TypeScript
-- **Styling:** Tailwind CSS
-- **Package Manager:** yarn
-- **Node.js:** 24 LTS
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `yarn dev`        | Start the app in development mode    |
+| `yarn build`      | Type-check and build the app         |
+| `yarn lint`       | Lint and auto-fix the codebase       |
+| `yarn format`     | Format the codebase with Prettier    |
+| `yarn typecheck`  | Run TypeScript type checks           |
 
 ## License
 
-MIT
+Released under the [MIT License](LICENSE).
