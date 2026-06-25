@@ -1,20 +1,20 @@
 # Session Forge Browser
 
-> A multi-account browser session manager — run isolated Gmail, Slack, and web accounts side by side in named workspaces.
+> A multi-account browser session manager for running isolated Gmail, Slack, and web accounts side by side in named workspaces.
 
-Session Forge Browser lets you stay signed in to multiple accounts on the same site at the same time. Each profile runs in a fully isolated browser session — separate cookies, storage, and cache — so your work, personal, and client accounts never collide.
+Session Forge Browser helps you stay signed in to multiple accounts on the same website at the same time. Each profile runs in a fully isolated browser session with its own cookies, storage, cache, and session data, so your work, personal, and client accounts stay completely separate.
 
 ## Features
 
-- **Isolated sessions** — every profile has completely separate cookies, localStorage, cache, and session data
-- **Customizable profiles** — name each profile, pick from 400+ icons or upload a custom image, and choose a color
-- **Per-profile language** — set the browser language individually for each profile (15 languages)
-- **Notification control** — configure notifications per profile (Allow all / Ask / Block all), with the source profile shown in every alert
-- **Collapsible sidebar** — switch between icon-only and icon + name views
-- **Drag & drop ordering** — organize profiles the way you work
-- **Data management** — clear cookies, cache, and app data per profile
-- **Crash recovery** — unresponsive or crashed sessions can be reloaded without restarting the app
-- **Lightweight** — built on Electron and tuned for fast switching
+* **Isolated sessions** — each profile has separate cookies, localStorage, cache, and session data
+* **Customizable profiles** — name each profile, choose from 400+ icons, upload a custom image, and assign a color
+* **Per-profile language settings** — configure the browser language individually for each profile, with support for 15 languages
+* **Notification control** — manage notifications per profile with Allow all, Ask, or Block all options, and clearly see which profile each alert belongs to
+* **Collapsible sidebar** — switch between icon-only and icon + name views for a cleaner workspace
+* **Drag-and-drop ordering** — organize profiles in the order that fits your workflow
+* **Data management** — clear cookies, cache, and app data for individual profiles without affecting others
+* **Crash recovery** — reload unresponsive or crashed sessions without restarting the entire app
+* **Lightweight experience** — built with Electron and optimized for fast profile switching
 
 ## Technology Stack
 
